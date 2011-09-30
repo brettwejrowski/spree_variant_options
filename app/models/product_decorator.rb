@@ -3,7 +3,7 @@ Product.class_eval do
   include ActionView::Helpers::NumberHelper
 
   def option_values
-    option_types.map{|i| i.option_values }.flatten.uniq
+    variants.map{|i| i.option_values }.flatten.uniq
   end
   
   def grouped_option_values
